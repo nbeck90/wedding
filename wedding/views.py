@@ -14,7 +14,7 @@ def send_email(request):
             send_mail(subject, message, from_email, ['admin@example.com'])
         except BadHeaderError:
             return HttpResponse('Invalid header found.')
-        return HttpResponseRedirect('/contact/thanks/')
+        return HttpResponseRedirect('rsvp.html')
 
     else:
         # In reality we'd use a form class
