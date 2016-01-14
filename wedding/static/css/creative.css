@@ -491,3 +491,11 @@ body {
 .a-black:hover {
     color: #999;
 }
+
+#main_header {
+    text-shadow: 4px 4px 3px rgba(0,0,0, .5);
+    color: #fff;
+    font-family: 'Kaushan Script';
+    font-size: 3em;
+    margin-left: -50px;
+}

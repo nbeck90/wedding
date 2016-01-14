@@ -68,10 +68,21 @@
     <section class="bg-primary" id="where">
         <div class="container">
             <div class="row" style="height: 700px">
+                <script>
+                   form_count = $("[name=extra_field_count]");
+                    $(".add-another").click(function() {
+                        element = $('<input type="text"/>');
+                        element.attr('name', 'extra_field_' + form_count);
+                        $(".forms").append(element);
+                        form_count ++;
+                        $("[name=extra_field_count]").val(form_count);
+                    })
+                </script>
                 <form>
                     <div class="forms">
                         {{ form.as_p }}
                     </div>
+                    <button class="add-another">add another</button>
                     <input type="submit" />
                 </form>
             </div>

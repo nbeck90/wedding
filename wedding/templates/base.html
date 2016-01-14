@@ -18,6 +18,7 @@
     <!-- Custom Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}" type="text/css">
 
     <!-- Plugin CSS -->
@@ -72,9 +73,7 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1>Wedding Time</h1>
-                <hr>
-                <a href="#info" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+            <h2 id='main_header'>Laura | Joe</h2>
             </div>
         </div>
     </header>
@@ -89,7 +88,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container" style='margin-bottom: -80px'>
             <div class="row">
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
@@ -102,23 +101,20 @@
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-user wow bounceIn text-primary" data-wow-delay=".1s" style="color: #BBE1D6;"></i>
-                        <h3>Who?</h3>
-                        <p class="text-muted">You know damn well who</p>
+                        <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" data-wow-delay=".1s" style="color: #BBE1D6;"></i>
+                        <h3><a href="{% url 'rsvp' %}" target="new" style="color: #000">RSVP</h3>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <a href="http://www.myregistry.com/public/joe-and-laura" target="new"><i class="fa fa-4x fa-gift wow bounceIn text-primary" data-wow-delay=".2s" style="color: #BBE1D6;"></i></a>
-                        <h3>Registry</h3></a>
-                        <p class="text-muted" id="registry-link"><a href="http://www.myregistry.com/public/joe-and-laura" target="new" style="color: #666">Check it out!</a></p>
+                        <h3 id="registry-link"><a href="http://www.myregistry.com/public/joe-and-laura" target="new" style="color: #000">Registry</h3></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-home wow bounceIn text-primary" data-wow-delay=".3s" style="color: #BBE1D6;"></i>
-                        <h3>Lodging</h3>
-                        <p class="text-muted">If you need a place to stay, get in contact with us!</p>
+                        <h3><a href="http://www.mcmenamins.com/AndersonSchool" target="new" style="color: #000">Lodging</h3>
                     </div>
                 </div>
             </div>
@@ -129,7 +125,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading-black">Sounds Great! Where is it?</h2>
+                    <p class="text-muted"><h3>April 2nd, 2016</br>
+                                              4:00 pm</h>
+                    </p>
                         <address>
                             <h3>
                                 <a href="http://tinyurl.com/lazandjaz" target="new" class="a-black">
@@ -203,7 +201,7 @@
                 <div class="row">
                     <div class="call-to-action">
                         <h2>RSVP Here</h2>
-                        <a href="{% url 'rsvp' %}" class="btn btn-default btn-xl wow bounceIn">Click Me!</a>
+                        <a href="/rsvp" class="btn btn-default btn-xl wow bounceIn">Click Me!</a>
                     </div>
                 </div>
             </div>

@@ -21,7 +21,8 @@ import views
 urlpatterns = [
     url(r'^$', 'wedding.views.home_page', name='home'),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^rsvp/', 'wedding.views.rsvp', name='rsvp'),
+    url(r'^rsvp/', 'registration.views.rsvp', name='rsvp'),
+    url(r'^rsvp/list', 'registration.views.rsvp_list', name='rsvp_list'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
