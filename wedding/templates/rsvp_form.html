@@ -68,11 +68,12 @@
     <section class="bg-primary" id="where">
         <div class="container">
             <div class="row" style="height: 700px">
-                <form>
-                    <div class="forms">
-                        {{ form.as_p }}
-                    </div>
-                    <input type="submit" />
+                <form action='' method='POST' enctype="multipart/form-data">
+                {% csrf_token %}
+                    <table style='color: black'>
+                        {{ form.as_table }}
+                    </table>
+                    <input type="submit" value='RSVP'/>
                 </form>
             </div>
         </div>

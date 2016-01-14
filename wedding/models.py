@@ -20,4 +20,4 @@ class RSVP(models.Model):
                                 max_length=25,
                                 null=True)
 
-    comments = models.TextField(null=True)
+    comment = models.TextField(null=True)

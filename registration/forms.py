@@ -12,7 +12,7 @@ class ResponseForm(forms.Form):
     )
 
     name = forms.CharField(max_length=256)
-    number = forms.IntegerField()
+    number = forms.CharField()
     email = forms.EmailField()
     response = forms.ChoiceField(choices=RESPONSES)
-    comment = forms.CharField(widget=forms.Textarea)
+    comments = forms.CharField(widget=forms.Textarea)

@@ -16,12 +16,12 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.contrib import admin
-import views
+from registration.views import RSVP
 
 urlpatterns = [
     url(r'^$', 'wedding.views.home_page', name='home'),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^rsvp/', 'registration.views.rsvp', name='rsvp'),
+    url(r'^rsvp/', RSVP.as_view(), name='rsvp'),
     url(r'^rsvp/list', 'registration.views.rsvp_list', name='rsvp_list'),
 ]
 

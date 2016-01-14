@@ -4,7 +4,7 @@ from django.views.generic.list import ListView
 from registration.forms import ResponseForm
 from django.http import HttpResponseRedirect
 
-from models import RSVP
+from wedding.models import RSVP
 
 
 class RSVPList(ListView):
@@ -20,7 +20,7 @@ def rsvp(request):
     if request.method == 'POST':
         form = ResponseForm(request.POST)
         if form.is_valid():
-            return HttpResponseRedirect('home.html')
+            return HttpResponseRedirect('/list')
     else:
         form = ResponseForm()
 
@@ -30,13 +30,13 @@ def rsvp(request):
 class RSVP(CreateView):
     model = RSVP
     context_object_name = 'rsvp'
-    success_url = '/success'
+    success_url = '/list'
     fields = [
         'name',
         'number',
         'email',
         'response',
-        'comments'
+        'comment'
     ]
 
     def form_valid(self, form):
