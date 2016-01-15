@@ -255,8 +255,37 @@ header .header-content .header-content-inner p {
 
 @media(min-width:992px) {
     .service-box {
-        margin: 20px auto 0;
+        margin: auto;
     }
+    #top-service {
+        margin-bottom: -82px
+    }
+    #bottom-service {
+        margin-top: -30px
+    }
+}
+
+@media(min-width:1200px) {
+    .service-box {
+        margin: auto;
+    }
+
+    #top-service {
+        margin-bottom: -0px
+    }
+
+    #bottom-service {
+        margin-top: 0px
+    }
+
+    #fourth_pic {
+        visibility: hidden;
+    }
+
+    #portfolio {
+        margin-bottom: -350px
+    }
+
 }
 
 .service-box p {
@@ -321,6 +350,7 @@ header .header-content .header-content-inner p {
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
         font-size: 22px;
     }
+
 }
 
 .call-to-action h2 {
@@ -498,4 +528,9 @@ body {
     font-family: 'Kaushan Script';
     font-size: 3em;
     margin-left: -50px;
+    padding-top: 100px
+}
+
+#portfolio {
+    background-color: #F0EAD6;
 }
